@@ -1,0 +1,466 @@
+/*
+ main-color:#fca311 
+ second-color:#e5e5e5	
+ third-color:#14213d
+ */
+/* Global Style */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #ffff;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 10px;
+	margin: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	font-family: "Almarai", sans-serif;
+	background-color: #14213d;
+	color: #ffff;
+	direction: rtl;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+/* start nav */
+nav {
+	padding: 30px 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.flex__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.links li {
+	opacity: 0.7;
+	transition: 0.3s;
+	position: relative;
+	z-index: 99;
+}
+
+.links li:hover {
+	opacity: 1;
+}
+
+.logo {
+	width: calc(100% / 3);
+	text-align: center;
+	font-family: "Pasajero";
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.register {
+	display: flex;
+	width: calc(100% / 3);
+	flex-direction: row-reverse;
+}
+
+.register li {
+	margin-right: 20px;
+}
+.register li:last-child a {
+	padding: 10px;
+	border: 2px solid #fca311;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.drop__menu {
+	position: absolute;
+	left: 0;
+	margin-top: 3px;
+	background-color: #e5e5e5;
+	transition: 0.1s;
+	display: none;
+}
+
+.drop__menu li {
+	border-bottom: 1px solid #fff;
+	text-align: left;
+	width: 130px;
+	opacity: 1;
+}
+
+.drop__menu li:hover {
+	background-color: #fca311;
+}
+
+.drop__menu li a {
+	color: #14213d;
+	text-transform: capitalize;
+	display: block;
+	padding: 10px;
+}
+
+.drop__menu li:last-child {
+	border: 0;
+}
+
+/* .menu:hover .drop__menu {
+	opacity: 1;
+	visibility: visible;
+} */
+/* start side menu */
+
+.sidemenu__btn {
+	color: #fca311;
+	font-size: 20px;
+	cursor: pointer;
+}
+.closemenu__btn {
+	width: 50px;
+	height: 50px;
+	background-color: #14213d;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+.side__menu {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: -350px;
+	background-color: #fca311;
+	padding: 40px;
+	width: 350px;
+	transition: 0.3s;
+	z-index: 999999999;
+}
+
+.side__logo {
+	margin-bottom: 20px;
+	text-align: center;
+	font-family: "Pasajero";
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.side__links {
+	display: flex;
+	flex-direction: column;
+}
+.side__links li {
+	margin-bottom: 10px;
+}
+
+.dropSide__menu {
+	display: none;
+	margin-top: 10px;
+	text-transform: capitalize;
+	margin-right: 10px;
+}
+
+/* start slider */
+
+.slider {
+	margin-top: 30px;
+	user-select: none;
+}
+
+.slides {
+	position: relative;
+	height: 400px;
+	z-index: 0;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: 0.6s;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.next {
+	background-color: #0000003a;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	right: 40px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	box-shadow: 0px 0px 5px -3px #000;
+}
+
+.previous {
+	background-color: #0000003a;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 40px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	box-shadow: 0px 0px 5px -3px #000;
+}
+
+.next:hover,
+.previous:hover {
+	background-color: #fca311;
+	color: #fff;
+}
+
+.pagination {
+	position: absolute;
+	right: 50%;
+	bottom: 20px;
+	transform: translate(50%, 0);
+	width: 100px;
+	/* background-color: #fca311; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pagination li {
+	border-radius: 50%;
+	background-color: #0000003a;
+	box-shadow: 0px 0px 5px -3px #000;
+	transition: 0.3s;
+	width: 15px;
+	height: 15px;
+}
+
+/* start section */
+.section {
+	margin-top: 50px;
+}
+.title__section {
+	font-size: 12px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.title__inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.icon {
+	width: 80px;
+	margin-right: 10px;
+}
+
+.more {
+	border: 2px solid #fca311;
+	padding: 10px 20px;
+	border-radius: 12px;
+	font-weight: bold;
+	transition: 0.3s;
+	font-size: 12px;
+	text-align: center;
+}
+
+.more:hover {
+	background-color: #fca311;
+	color: #14213d;
+}
+.flex__section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.items {
+	width: calc(95% / 6);
+	height: 300px;
+	margin-bottom: 15px;
+	background-color: #fca311;
+}
+
+.item {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.poster {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+}
+
+.info {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.play {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #e5e5e5;
+	background-color: #fca311;
+	padding: 10px;
+}
+.rate {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: #fca311;
+	padding: 10px;
+	color: #14213d;
+	font-size: 14px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.name {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	line-height: 1.5;
+	font-size: 12px;
+	font-weight: bold;
+	color: #e5e5e5;
+}
+
+.items:hover .overlay {
+	opacity: 1;
+	visibility: visible;
+	background-color: #14213d62;
+}
+
+/* start footer */
+
+footer {
+	margin-top: 120px;
+	background-color: #e5e5e5;
+	padding: 50px 0;
+}
+
+.logo__footer {
+	text-align: left;
+	font-family: "Pasajero";
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.logo__footer a {
+	color: #14213d;
+	font-weight: bold;
+}
+
+.flex__footer {
+	flex-direction: row-reverse;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.links__footer {
+	width: calc(100% / 4);
+}
+
+.links__footer li {
+	margin-bottom: 15px;
+}
+.links__footer li a {
+	color: #14213d;
+}
+
+.copyright {
+	text-align: center;
+	color: #14213d;
+	margin-top: 30px;
+	font-family: "Pasajero";
+	direction: ltr;
+}
+
+/* start banner */
+
+.banner {
+	background-attachment: fixed;
+	height: 500px;
+	position: relative;
+	background-position: center;
+}
+
+.bannerNetflix__img {
+	background-image: url("https://www.bajajfinservmarkets.in/content/dam/emistoremarketplace/index/20-02-2020/netflix/Netflix-Banner_1080x419.jpg?impolicy=pqmedium");
+}
+
+.bannerAmazon__img {
+	background-image: url("https://www.broadbandshack.com/wp-content/uploads/2020/08/New_amazon_header.jpg.eeimg_.1920.3-1.default.jpg");
+}
+
+.banner__overlay {
+	width: 100%;
+	height: 100%;
+	background-color: #fca21181;
+}
+
+.banner__info {
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
